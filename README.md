@@ -25,3 +25,6 @@ Setup:
     `jupyter notebook`
     
 Without jupyter, also works from console; display locally in Qt window or save to file
+
+For example, see [plot.ipynb](plot.ipynb)
+
