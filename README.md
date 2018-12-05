@@ -11,7 +11,7 @@ Built for [qutil](https://github.com/nugend/qutil), (will be) hosted on [Anacond
 
 Accepts dictionaries with some or all args. Little error handling to prevent errors with missing required args. Suitable only for the most basic of plots, for anything with more complex requirements more direct usage of matplotlib will be required
 
-Setup:
+## Setup
 
 * Install kdb, embedPy & jupyterq. Easiest way is via [Anaconda](https://www.anaconda.com/download/):
 
@@ -29,5 +29,21 @@ Setup:
     
 Without jupyter, also works from console; display locally in Qt window or save to file
 
-For example, see [plot.ipynb](plot.ipynb)
+## Usage
+
+For examples, see [plot.ipynb](plot.ipynb), [AoC Stats.ipynb](AoC Stats.ipynb) & [Cryptographic Speed Test.ipynb](Cryptographic Speed Test.ipynb)
+
+Basic usage is `plot` with argument dictionary. Valid keys for argument dictionary:
+
+* `plot` - type of plot; options: `` `line`pie``
+* `file` - file to save to (*optional* if not provided, will output plot to Jupyter/Qt window)
+* `x` - x values for line chart
+* `y` - y values for line chart
+* `title` - title [string]
+* `xlabel` - label for x axis (line chart) [string]
+* `ylabel` - label for y axis (line chart) [string]
+* `grid` - display grid (line chart) [boolean]
+* `labels` - categories for pie chart
+* `sizes` - percentages for pie chart
+
 
