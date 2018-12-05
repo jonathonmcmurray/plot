@@ -31,7 +31,7 @@ Without jupyter, also works from console; display locally in Qt window or save t
 
 ## Usage
 
-For examples, see [plot.ipynb](plot.ipynb), [AoC Stats.ipynb](AoC Stats.ipynb) & [Cryptographic Speed Test.ipynb](Cryptographic Speed Test.ipynb)
+For examples, see [plot.ipynb](plot.ipynb), [AoC Stats.ipynb](AoC%20Stats.ipynb) & [Cryptographic Speed Test.ipynb](Cryptographic%20Speed%20Test.ipynb)
 
 Basic usage is `plot` with argument dictionary. Valid keys for argument dictionary:
 
