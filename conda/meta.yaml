@@ -1,0 +1,19 @@
+package:
+  name: plot
+  version: 0.1.0
+
+build:
+  number: 0
+  noarch: true
+
+source:
+  git_url: https://github.com/jonathonmcmurray/plot.git
+
+requirements:
+  run:
+    - qutil
+
+about:
+  home: https://github.com/jonathonmcmurray/plot
+  license: MIT
+  summary: Simple plots for kdb+/q
