@@ -1,4 +1,7 @@
-# plot 
+# plot
+
+[![Anaconda-Server Badge](https://anaconda.org/jmcmurray/plot/badges/version.svg)](https://anaconda.org/jmcmurray/plot)
+[![Anaconda-Server Badge](https://anaconda.org/jmcmurray/plot/badges/downloads.svg)](https://anaconda.org/jmcmurray/plot)
 
 Plotting module for q using qutil & embedPy
 
