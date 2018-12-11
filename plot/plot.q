@@ -28,5 +28,5 @@ pie:{[sh;file;labels;sizes;title]
 plot:{[x]
   if[99h<>type x;'`type];                                                           //require dict
   if[not x[`plot]in key .plt;'"unknown plot"];                                      //make sure we know how to plot
-  .[f;(`file in key x),value(1_value[f:.plt x`plot]1)#x];                           //pass necessary params to plot function
+  .[f;(not`file in key x),value(1_value[f:.plt x`plot]1)#x];                        //pass necessary params to plot function
  }
