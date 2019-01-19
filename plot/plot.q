@@ -9,7 +9,7 @@ line:{[sh;file;x;y;title;xlabel;ylabel;grid]
   plt[`xlabel]xlabel;                                                               //set xlabel
   plt[`ylabel]ylabel;                                                               //set ylabel
   if[99=type y;
-   l:enlist[x],/:flip(value y;`label pykw/:key y);
+   l:$[99=type x;enlist'[value x],';enlist[x],/:]flip(value y;`label pykw/:key y);
    plt[`plot] .' l;
    plt[`legend][];
   ];
