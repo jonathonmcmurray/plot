@@ -20,6 +20,7 @@ line:{[sh;file;x;y;title;xlabel;ylabel;grid]
   if[grid;plt[`grid]1b];                                                            //add grid if required
   if[sh;plt[`show][]];                                                              //show if to be shown
   if[not sh;plt[`savefig]file];                                                     //save to file if to be saved
+  plt[`close][];                                                                    //close the plot object
  }
 
 pie:{[sh;file;labels;sizes;title]
