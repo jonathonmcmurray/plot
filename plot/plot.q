@@ -8,7 +8,14 @@ line:{[sh;file;x;y;title;xlabel;ylabel;grid]
   plt[`title]title;                                                                 //set title
   plt[`xlabel]xlabel;                                                               //set xlabel
   plt[`ylabel]ylabel;                                                               //set ylabel
-  plt[`plot][x;y];                                                                  //plot line graph
+  if[99=type y;
+   l:enlist[x],/:flip(value y;`label pykw/:key y);
+   plt[`plot] .' l;
+   plt[`legend][];
+  ];
+  if[99<>type y;
+   plt[`plot][x;y];
+  ];
   grid:$[null grid;0b;grid];                                                        //if grid not in args, will be null
   if[grid;plt[`grid]1b];                                                            //add grid if required
   if[sh;plt[`show][]];                                                              //show if to be shown
