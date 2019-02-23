@@ -20,7 +20,9 @@ line:{[sh;file;x;y;title;xlabel;ylabel;grid]
   if[grid;plt[`grid]1b];                                                            //add grid if required
   if[sh;plt[`show][]];                                                              //show if to be shown
   if[not sh;plt[`savefig]file];                                                     //save to file if to be saved
+  r:tostr plt;                                                                      //plot to base64 string for HTML embed
   plt[`close][];                                                                    //close the plot object
+  :r;                                                                               //return string
  }
 
 pie:{[sh;file;labels;sizes;title]
@@ -31,10 +33,18 @@ pie:{[sh;file;labels;sizes;title]
   if[not sh;plt[`savefig]file];                                                     //save to file if to be saved
  }
 
+tostr:{[plt]
+  bio:.p.import[`io;`:BytesIO];
+  b64:.p.import[`base64;`:b64encode];
+  img:bio[];
+  plt[`savefig]img;
+  :`char$b64[img[`:getvalue][]]`;
+ }
+
 \d .
 
 plot:{[x]
   if[99h<>type x;'`type];                                                           //require dict
   if[not x[`plot]in key .plt;'"unknown plot"];                                      //make sure we know how to plot
-  .[f;(not`file in key x),value(1_value[f:.plt x`plot]1)#x];                        //pass necessary params to plot function
+  :.[f;(not`file in key x),value(1_value[f:.plt x`plot]1)#x];                       //pass necessary params to plot function
  }
