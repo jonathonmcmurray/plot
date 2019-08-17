@@ -1,6 +1,6 @@
 package:
   name: plot
-  version: 0.1.2
+  version: 0.1.3
 
 build:
   number: 0
@@ -12,6 +12,7 @@ source:
 requirements:
   run:
     - qutil
+    - matplotlib
 
 about:
   home: https://github.com/jonathonmcmurray/plot
